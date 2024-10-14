@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forma</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Ro'yxatdan o'tish</h2>
+    <form class="js-register-form" action="#">
+      <label for="name">Ismingiz:</label>
+      <input class="js-first-name" type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+
+      <label for="age">Yoshingiz:</label>
+      <input class="js-age" type="number" id="age" name="age" placeholder="Yoshingizni kiriting" required>
+
+      <label for="password">Parolingiz:</label>
+      <input class="parol" type="password" id="password" name="password" placeholder="Parolingizni kiriting" required>
+
+      <label for="phone">Telefon raqam:</label>
+      <input class="nomer" type="tel" id="phone" name="phone" placeholder="+998 (90) 123-45-67" required pattern="^\+998\s?\(\d{2}\)\s?\d{3}-\d{2}\d{2}$">
+        <div class="for-btn">
+            <button type="submit">Yuborish</button>
+        </div>
+    </form>
+  </div>
+
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
