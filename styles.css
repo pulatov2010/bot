@@ -13,7 +13,6 @@ body {
     background-attachment: fixed;
 }
 
-
   
   .form-container {
     background-color: #fff;
@@ -22,6 +21,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
+    align-items: center;
   }
   
   .form-container h2 {

