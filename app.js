@@ -35,3 +35,43 @@ const sendRequest = (e) => {
 };
 
 document.querySelector(".js-register-form").addEventListener("submit", sendRequest);
+
+
+
+// cursor
+    // Segmentlarni olish
+    const segments = document.querySelectorAll('.segment');
+    const numSegments = segments.length;
+    let mouseX = 0, mouseY = 0;
+    let delay = 0.2;
+
+    // Kursor harakatini kuzatish
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // Segmentlarni kursorni kuzatib harakatlantirish
+    function animateRope() {
+      let x = mouseX, y = mouseY;
+
+      segments.forEach((segment, index) => {
+        const segmentX = parseFloat(segment.style.left) || 0;
+        const segmentY = parseFloat(segment.style.top) || 0;
+
+        const dx = x - segmentX;
+        const dy = y - segmentY;
+
+        // Segmentning yangi joyini hisoblash va qo'llash
+        segment.style.left = `${segmentX + dx * delay}px`;
+        segment.style.top = `${segmentY + dy * delay}px`;
+
+        // Keyingi segment uchun joylashuvni yangilash
+        x = segmentX;
+        y = segmentY;
+      });
+
+      requestAnimationFrame(animateRope);
+    }
+
+    animateRope(); // Harakatni boshlash
