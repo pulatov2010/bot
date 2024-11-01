@@ -17,6 +17,10 @@ body {
   position: absolute;
 }
 
+input{
+  z-index: 56;
+}
+
   
   .form-container {
     background-color: #fff;
